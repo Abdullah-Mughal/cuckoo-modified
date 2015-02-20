@@ -19,4 +19,7 @@ def is_dict(value):
 
 @register.filter
 def get_item(dictionary, key):
-    return dictionary.get(key, "")
+    try:
+        return dictionary.get(key, "")
+    except:
+        return ""
